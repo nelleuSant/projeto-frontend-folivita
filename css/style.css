@@ -1,0 +1,445 @@
+
+/* =========================================
+   1. IDENTIDADE VISUAL E VARIÁVEIS
+========================================= */
+
+:root {
+    /* Tipografia */
+    --font-titulos: 'Cormorant Garamond', serif;
+    --font-textos: 'Lato', sans-serif;
+
+    /* Cores */
+    --verde-floresta: #203B30;
+    --verde-folha: #647B51;
+    --verde-salvia: #A3A58B;
+    --creme: #F2EFE9;
+    --terra: #B99A70;
+    --cinza-claro: #E5E5E5;
+    --cinza-medio: #C4C4C4;
+    --cinza-escuro: #7A7A7A;
+}
+
+
+/* =========================================
+   2. CONFIGURAÇÕES GLOBAIS
+========================================= */
+
+body {
+    font-family: var(--font-textos);
+    background-color: var(--creme);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulos);
+}
+
+
+/* =========================================
+   3. COMPONENTES COMPARTILHADOS
+========================================= */
+
+/* Logotipo textual */
+
+.navbar-brand {
+    font-family: var(--font-titulos);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--verde-floresta);
+}
+
+
+/* Botões */
+
+.btn-primary {
+    background-color: var(--verde-floresta);
+    border-color: var(--verde-floresta);
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-folha);
+    border-color: var(--verde-folha);
+}
+
+.btn-outline-primary {
+    color: var(--verde-floresta);
+    border-color: var(--verde-floresta);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--verde-floresta);
+    border-color: var(--verde-floresta);
+}
+
+
+/* =========================================
+   4. SEÇÕES DA PÁGINA
+========================================= */
+
+
+/* -----------------------------------------
+   4.1 NAVEGAÇÃO
+----------------------------------------- */
+
+.navbar {
+    background-color: var(--creme);
+}
+
+
+/* -----------------------------------------
+   4.2 HOME - HERO SECTION
+----------------------------------------- */
+
+.hero-section {
+    background-color: var(--creme);
+    padding: 70px 0px;
+}
+
+/* Container das colunas */
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Coluna de texto */
+
+.hero-subtitle {
+    font-size: 0.85rem;
+    color: var(--verde-folha);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--verde-floresta);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Botões da Hero */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Imagem */
+
+.hero-image {
+    flex: 1;
+    width: 500px;
+}
+
+.hero-image img {
+    display: block;
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* -----------------------------------------
+   4.2 SOBRE - SOBRE SECTION
+----------------------------------------- */
+
+.sobre-section {
+    background-color: white;
+    padding: 70px 0;
+}
+
+/* Container das colunas */
+
+.sobre-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+
+/* Coluna de texto */
+
+.sobre-subtitle {
+    font-size: 0.85rem;
+    color: var(--verde-folha);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sobre-content {
+    flex: 1;
+}
+
+.sobre-content h2{
+    font-size: 4rem;
+    color: var(--verde-floresta);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sobre-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* Imagem */
+
+.sobre-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.sobre-image img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Pilares da Marca*/
+
+.sobre-pillars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.sobre-item {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--creme);
+    width: 400px;
+    height: 280px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.sobre-item h3 {
+    font-size: 1.5rem;
+    color: var(--verde-floresta);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.sobre-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sobre-value span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--verde-floresta);
+    font-weight: 700;
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--cinza-medio);
+    border-radius: 60px;
+    padding: 8px 14px;
+}
+
+/* -----------------------------------------
+   4.3 PRODUTOS - CARROSSEL
+----------------------------------------- */
+
+.produtos-section {
+    background-color: var(--creme);
+    padding: 70px 0;
+}
+
+.produtos-header {
+    text-align: left;
+    margin-bottom: 45px;
+}
+
+.produtos-subtitle {
+    color: var(--verde-folha);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.produtos-header h2 {
+    color: var(--verde-floresta);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.produtos-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.produtos-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.produto-card {
+    /* Três cards visíveis no desktop */
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+    border: 1px solid #D8D2C7;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #FAF9F6;
+}
+
+.produto-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.produto-category {
+    color: var(--verde-folha);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.produto-card h3 {
+    color: var(--verde-floresta);
+    font-size: 1.8rem;
+}
+
+.produto-footer {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+    width: 100%;
+}
+
+.footer-text {
+    color: var(--verde-floresta);
+    font-size: 0.85rem;
+    
+}
+
+.produto-footer a {
+    justify-self: end;
+    width: 100%;
+    max-width: 150px;
+    margin: 10px;
+}
+
+/* CONTROLES */
+
+.produtos-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.produtos-controls button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--verde-floresta);
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--verde-floresta);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produtos-controls button:hover:not(:disabled) {
+    background-color: var(--verde-floresta);
+    color: white;
+}
+
+.produtos-controls button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   5. RESPONSIVIDADE
+========================================= */
+
+/* Tablets e celulares */
+
+@media (max-width: 768px) {
+
+    /* Hero */
+
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    /* Sobre */
+
+    .sobre-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .sobre-image {
+        max-width: 100%;
+    }
+
+    .sobre-image img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .sobre-content h2 {
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .produto-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .produto-card {
+        flex-basis: 100%;
+    }
+}
