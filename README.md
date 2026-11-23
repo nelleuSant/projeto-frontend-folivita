@@ -1,94 +1,129 @@
-# 🍃 Folivita — Ateliê de Chás Orgânicos
+# Folivita — Ateliê de Chás Orgânicos
 
 **A vida em cada folha.**
 
-O Folivita é um projeto de desenvolvimento web que apresenta a identidade visual de um ateliê fictício especializado em chás orgânicos e infusões botânicas artesanais.
+Folivita é um projeto da disciplina de front-end da Especialização de Desenvolvimento Web do IF Sul de Minas que apresenta a identidade digital de um ateliê fictício especializado em chás orgânicos e infusões botânicas.
 
-A proposta é criar uma experiência digital que transmita a essência da marca: naturalidade, acolhimento, cuidado artesanal e conexão com a natureza.
+A proposta é transmitir a essência de uma marca que valoriza ingredientes naturais, pequenos produtores e processos artesanais, por meio de uma experiência digital elegante, acolhedora e intuitiva.
 
-> 🚧 **Status: Em desenvolvimento**
+## Sobre o projeto
 
-## 🎨 Sobre o projeto
+O site foi desenvolvido como uma página institucional (*landing page*), reunindo informações sobre a marca, apresentação de produtos, proposta de experiência e canais de contato.
 
-O site está sendo desenvolvido como um projeto acadêmico de Front-end, com foco na aplicação prática de HTML, CSS, JavaScript e Bootstrap.
+O desenvolvimento combina estruturação semântica com HTML, estilização personalizada em CSS, componentes do Bootstrap e interações implementadas com JavaScript.
 
-A identidade visual foi pensada para transmitir elegância e simplicidade, utilizando elementos botânicos, cores naturais e tipografia que reforça a proposta artesanal da marca.
+## Funcionalidades
 
-## 🛠️ Tecnologias utilizadas
+- **Navegação responsiva:** menu adaptável a diferentes tamanhos de tela.
+- **Apresentação institucional:** conteúdo sobre a identidade, missão, visão e valores da marca.
+- **Catálogo de produtos:** apresentação de cinco criações de chás e infusões em um carrossel com navegação individual.
+- **Seção de experiência:** comunicação da proposta sensorial e artesanal da marca.
+- **Formulário de contato:** validação de campos, mensagens de erro e contador de caracteres.
+- **Layout responsivo:** adaptação dos elementos para diferentes resoluções.
 
-- **HTML5:** estruturação e organização do conteúdo.
-- **CSS3:** estilização e identidade visual personalizada.
-- **JavaScript:** interatividade e funcionalidades do site.
-- **Bootstrap 5:** componentes e recursos para construção do layout responsivo.
-- **Google Fonts:** tipografias Cormorant Garamond e Lato.
+## Tecnologias utilizadas
 
-## 📁 Estrutura do projeto
+| Tecnologia | Aplicação |
+|---|---|
+| HTML5 | Estrutura e semântica do conteúdo |
+| CSS3 | Estilização e identidade visual |
+| JavaScript | Interações, carrossel e validação do formulário |
+| Bootstrap 5 | Componentes e recursos de layout responsivo |
+| Vite | Servidor de desenvolvimento e build de produção |
+| npm | Gerenciamento de dependências |
+| Google Fonts | Tipografia do projeto |
+
+O Bootstrap é instalado e gerenciado como dependência do projeto por meio do npm. O Vite é utilizado para integrar os recursos e gerar os arquivos otimizados para produção.
+
+## Identidade visual
+
+A identidade visual da Folivita foi construída a partir de referências botânicas e artesanais, com uma linguagem visual natural, contemporânea e sofisticada.
+
+**Elementos da identidade:**
+
+- **Cormorant Garamond:** tipografia utilizada nos títulos.
+- **Lato:** tipografia utilizada nos textos e elementos de interface.
+- **Paleta cromática:** tons de verde, creme e terra, inspirados na natureza e nos ingredientes botânicos.
+
+O documento de identidade visual está disponível em [`assets/docs/Identidade-Visual-Folivita.pdf`](assets/docs/Identidade-Visual-Folivita.pdf).
+
+## Estrutura do projeto
 
 ```text
-projeto-frontend/
-│
+folivita/
 ├── assets/
 │   ├── docs/
-│   ├── icons/
+│   │   └── Identidade-Visual-Folivita.pdf
 │   ├── images/
 │   └── logo/
-│
 ├── css/
 │   └── style.css
-│
 ├── js/
 │   └── script.js
-│
 ├── index.html
 ├── package.json
+├── package-lock.json
+├── .gitignore
 └── README.md
 ```
 
-## ✨ Funcionalidades desenvolvidas
+## Como executar o projeto
 
-- Página inicial com apresentação da marca.
-- Seção institucional com história, missão, visão e valores.
-- Catálogo com cinco criações de chás e infusões.
-- Carrossel de produtos com navegação individual.
-- Identidade visual personalizada.
+### Pré-requisitos
 
-## 🚧 Próximas etapas
+- [Node.js](https://nodejs.org/) instalado.
+- npm, incluído na instalação do Node.js.
 
-- [X] Desenvolver a seção Início.
-- [X] Desenvolver a seção Sobre.
-- [X] Desenvolver a seção Produtos.
-- [ ] Desenvolver a seção Experiência.
-- [ ] Desenvolver a seção Contato.
-- [ ] Implementar e validar o formulário de contato.
-- [ ] Revisar a responsividade em diferentes dispositivos.
-- [ ] Realizar ajustes finais de acessibilidade e usabilidade.
+### Instalação
 
-## ⚙️ Como executar o projeto
-
-1. Clone este repositório:
+Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/nelleuSant/projeto-frontend-folivita.git
 ```
 
-2. Acesse a pasta do projeto:
+Acesse a pasta:
 
 ```bash
-cd projeto-frontend
+cd projeto-frontend-folivita
 ```
 
-3. Instale as dependências:
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-4. Abra o arquivo `index.html` utilizando uma extensão como **Live Server** no Visual Studio Code.
+Inicie o servidor de desenvolvimento:
 
-## 🌿 Identidade visual
+```bash
+npm run dev
+```
 
-A identidade do Folivita foi desenvolvida para representar um ateliê contemporâneo de chás, valorizando elementos naturais, tons terrosos e uma estética botânica minimalista.
+O Vite disponibilizará um endereço local para acessar a aplicação pelo navegador.
+
+### Build de produção
+
+Para gerar os arquivos otimizados:
+
+```bash
+npm run build
+```
+
+Os arquivos de produção serão gerados na pasta `dist/`.
+
+Para visualizar localmente a versão de produção:
+
+```bash
+npm run preview
+```
+
+## Observações
+
+- A Folivita é uma marca fictícia, desenvolvida para fins educacionais e de portfólio.
+- Os dados de endereço e contato apresentados no site são fictícios.
+- O formulário implementa validação no front-end e não realiza envio de mensagens para um servidor.
 
 ---
 
-**Projeto acadêmico desenvolvido para fins educacionais.**
+**Desenvolvido como projeto de estudo da pós-graduação em Desenvolvimento Web do IF Sul de Minas.**

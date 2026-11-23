@@ -2,6 +2,12 @@
 /* =========================================
    1. IDENTIDADE VISUAL E VARIÁVEIS
 ========================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 
 :root {
     /* Tipografia */
@@ -50,26 +56,39 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Botões */
 
-.btn-primary {
-    background-color: var(--verde-floresta);
-    border-color: var(--verde-floresta);
+/* Botão preenchido */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--verde-floresta) !important;
+    border-color: var(--verde-floresta) !important;
+    color: var(--creme) !important;
 }
 
 .btn-primary:hover {
-    background-color: var(--verde-folha);
-    border-color: var(--verde-folha);
+    background-color: var(--verde-folha) !important;
+    border-color: var(--verde-folha) !important;
 }
 
-.btn-outline-primary {
-    color: var(--verde-floresta);
-    border-color: var(--verde-floresta);
+/* Botão com contorno */
+.btn-outline-primary,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: var(--verde-floresta) !important;
+    border-color: var(--verde-floresta) !important;
 }
 
 .btn-outline-primary:hover {
-    background-color: var(--verde-floresta);
-    border-color: var(--verde-floresta);
+    background-color: var(--verde-floresta) !important;
+    border-color: var(--verde-floresta) !important;
+    color: var(--creme) !important;
 }
 
+/* Remove o brilho azul do foco */
+.btn-primary:focus-visible,
+.btn-outline-primary:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(32, 59, 48, 0.25) !important;
+}
 
 /* =========================================
    4. SEÇÕES DA PÁGINA
@@ -332,6 +351,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 10px;
     margin: 20px;
     width: 100%;
@@ -380,21 +400,428 @@ h1, h2, h3, h4, h5, h6 {
     cursor: not-allowed;
 }
 
+/* -----------------------------------------
+   4.4 EXPERIÊNCIA - EXPERIÊNCIA SECTION
+----------------------------------------- */
+
+.experiencia-section {
+    background-color: var(--verde-floresta);
+    padding: 70px;
+}
+
+/* Container das colunas */
+
+.experiencia-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+
+/* Coluna de texto */
+
+.experiencia-subtitle {
+    font-size: 0.85rem;
+    color: var(--creme);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.experiencia-content {
+    flex: 1;
+}
+
+.experiencia-content h2{
+    font-size: 4rem;
+    color: var(--creme);
+    font-weight: 500;
+}
+
+.experiencia-description {
+    font-size: 1.05rem;
+    color: var(--creme);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Cards de experiência */
+
+.experiencia-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.experiencia-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--creme);
+    max-width: 400px;
+    height: 225px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card-img {
+    width: 30px;
+    height: 30px;
+}
+
+.card-header-title {
+    font-size: 1rem;
+    color: var(--verde-floresta);
+    font-weight: 500;
+}
+
+.card-body {
+    font-size: 0.9rem;
+    color: var(--verde-floresta);
+    line-height: 1.6;
+    text-align: start;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--verde-floresta);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: var(--verde-floresta);
+    line-height: 1.6;
+    text-align: start;
+}
+
+/* -----------------------------------------
+   4.5 CONTATO- CONTATO SECTION
+----------------------------------------- */
+
+.contato-section {
+    background-color: var(--creme);
+    padding: 70px 0;
+}
+
+
+.contato-container {
+    width: 85%;
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 55px;
+
+    align-items: start;
+}
+/* Cabeçalho do contato*/
+
+.section-label {
+    display: block;
+    color: #455b3d;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.contato-form h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #294238;
+    margin-bottom: 10px;
+}
+
+.contato-description {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Campos de formulário*/
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 12px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #303a34;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #d9d5cd;
+    border-radius: 3px;
+    background-color: #faf9f6;
+    color: #303a34;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.form-group input,
+.form-group select {
+    height: 40px;
+}
+
+.form-group textarea {
+    height: 78px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #294238;
+}
+
+
+/*Botão*/
+
+.contato-form button {
+    margin-top: 18px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 3px;
+    background-color: #203b30;
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato-form button:hover {
+    background-color: #385746;
+}
+
+/* CARTÃO DE CONTATO*/
+.contato-info {
+    background-color: #fff;
+    border: 1px solid #dedbd4;
+    border-radius: 11px;
+    padding: 20px;
+}
+
+
+/* IDENTIDADE DA MARCA */
+
+.info-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.info-brand img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.info-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #294238;
+    margin-bottom: 4px;
+}
+
+.info-brand p {
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--verde-floresta);
+}
+
+
+/* DIVISÓRIA */
+
+.contato-info hr {
+    border: none;
+    border-top: 1px solid #e6e2db;
+    margin-bottom: 16px;
+}
+
+
+/* INFORMAÇÕES */
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.info-item span {
+    color: #455b3d;
+    font-size: 14px;
+    min-width: 10px;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 11px;
+    color: #303a34;
+    margin-bottom: 3px;
+}
+
+.info-item p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Feedback do formulário */
+
+.mensagem-erro {
+    color: #c0392b;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+#contador-caracteres {
+    font-size: 11px;
+    color: var(--cinza-escuro);
+    text-align: right;
+    margin-top: 5px;
+}
+
+#feedback-formulario {
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* -----------------------------------------
+   4.6 FOOTER
+----------------------------------------- */
+.footer {
+    background-color: #203b30;
+    color: #f3f0ea;
+    padding: 30px 0;
+}
+
+.footer-container {
+    width: 85%;
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* IDENTIDADE */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.footer-brand p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #d5ddd7;
+}
+
+
+/* NAVEGAÇÃO */
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.footer-nav a {
+    color: #d5ddd7;
+    text-decoration: none;
+    font-size: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+
+/* DIREITOS AUTORAIS */
+
+.footer-copy p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #d5ddd7;
+}
+
+
 
 /* =========================================
    5. RESPONSIVIDADE
 ========================================= */
 
-/* Tablets e celulares */
+/* -----------------------------------------
+   5.1 TABLETS
+   Até 991.98px
+----------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
 
-    /* Hero */
+    /* HERO */
 
     .hero-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 35px;
+        gap: 30px;
     }
 
     .hero-content h1 {
@@ -402,14 +829,113 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-image {
+        width: 100%;
+        max-width: 450px;
+        min-width: 0;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 300px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre-container {
+        gap: 30px;
+    }
+
+    .sobre-content h2 {
+        font-size: 3rem;
+    }
+
+    .sobre-image {
+        max-width: 450px;
+        min-width: 0;
+    }
+
+    .sobre-item {
+        width: calc(50% - 10px);
+        height: auto;
+        min-height: 220px;
+    }
+
+
+    /* PRODUTOS */
+
+    .produto-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+
+    /* EXPERIÊNCIA */
+
+    .experiencia-section {
+        padding: 55px 0;
+    }
+
+    .experiencia-card {
+        flex: 1 1 calc(50% - 10px);
+        max-width: none;
+        height: auto;
+        min-width: 0;
+    }
+
+
+    /* CONTATO */
+
+    .contato-container {
+        width: 90%;
+        grid-template-columns: 1fr 0.85fr;
+        gap: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer-copy {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* -----------------------------------------
+   5.2 CELULARES
+   Até 767.98px
+----------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    /* HERO */
+
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-image {
         max-width: 100%;
     }
 
     .hero-image img {
-        height: 350px;
+        height: 300px;
     }
 
-    /* Sobre */
+
+    /* SOBRE */
 
     .sobre-container {
         flex-direction: column;
@@ -417,29 +943,167 @@ h1, h2, h3, h4, h5, h6 {
         gap: 30px;
     }
 
+    .sobre-content h2 {
+        font-size: 2.8rem;
+    }
+
     .sobre-image {
         max-width: 100%;
     }
 
     .sobre-image img {
-        width: 100%;
-        height: 350px;
+        height: 300px;
     }
 
-    .sobre-content h2 {
-        font-size: 3rem;
+
+    /* EXPERIÊNCIA */
+
+    .experiencia-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .experiencia-cards {
+        justify-content: flex-start;
     }
 
 }
 
-@media (max-width: 991.98px) {
-    .produto-card {
-        flex-basis: calc((100% - 24px) / 2);
-    }
-}
+
+/* -----------------------------------------
+   5.3 CELULARES PEQUENOS
+   Até 575.98px
+----------------------------------------- */
 
 @media (max-width: 575.98px) {
+
+    /* AJUSTES GERAIS */
+
+    .hero-section,
+    .sobre-section,
+    .produtos-section {
+        padding: 45px 0;
+    }
+
+
+    /* HERO */
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .sobre-description {
+        font-size: 0.95rem;
+    }
+
+    .sobre-image img {
+        height: 250px;
+    }
+
+    .sobre-pillars {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sobre-item {
+        width: 100%;
+        min-height: 0;
+    }
+
+
+    /* PRODUTOS */
+
+    .produtos-header h2 {
+        font-size: 2.3rem;
+    }
+
     .produto-card {
         flex-basis: 100%;
     }
+
+    .produto-card img {
+        height: 220px;
+    }
+
+
+    /* EXPERIÊNCIA */
+
+    .experiencia-section {
+        padding: 45px 0;
+    }
+
+    .experiencia-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .experiencia-description {
+        font-size: 0.95rem;
+    }
+
+    .experiencia-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .experiencia-card {
+        width: 100%;
+        flex: none;
+        max-width: none;
+        height: auto;
+    }
+
+
+    /* CONTATO */
+
+    .contato-section {
+        padding: 45px 0;
+    }
+
+    .contato-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contato-form h2 {
+        font-size: 2rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-copy {
+        grid-column: auto;
+    }
+
 }
+

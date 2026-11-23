@@ -1,5 +1,13 @@
+# Dependências
 node_modules/
+
+# Arquivos gerados pelo Vite
+dist/
+
+# Arquivos de ambiente
 .env
 .env.*
+
+# Sistema operacional
 .DS_Store
-.directory
+Thumbs.db
