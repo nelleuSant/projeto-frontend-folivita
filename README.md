@@ -126,4 +126,6 @@ npm run preview
 
 ---
 
+Link do site: https://projeto-frontend-folivita.netlify.app/
+
 **Desenvolvido como projeto de estudo da pós-graduação em Desenvolvimento Web do IF Sul de Minas.**
